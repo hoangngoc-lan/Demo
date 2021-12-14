@@ -1,0 +1,117 @@
+*{
+	padding:0;
+	margin: 0;
+	border-radius:0 !important;
+}
+
+
+.dropdown{
+position: relative;
+display: inline-block;
+
+}
+.dropdown-content{
+	display: none;
+	position:absolute;
+	z-index:1;
+	
+	background-color:#DF013A;
+
+	
+}
+.dropdown:hover .dropdown-content{
+	display: block;
+	
+
+}
+#carouselExampleControls{
+height:500px !important;
+
+
+}
+#carouselExampleControls img{
+	height:500px !important;
+}
+.information i{
+	color: yellow;
+	
+
+
+}
+.information span i{
+	color:#A4A4A4 !important;
+}
+table{
+	border:0.5px solid #00BFFF !important;
+	font-size: 13px;
+}
+.crate button{
+	width: 100% !important;
+	height: 60px;
+	background-color:#DF013A !important;
+	border:none;
+}
+.crate i{
+	color:white!important ;
+}
+.modal-body img{
+	width: 100px;
+	height:100px;
+}
+.modal-footer button{
+	width:200px !important;
+	margin:auto !important;
+	background-color:#DF013A !important;
+	border:none;
+}
+.modal-body a{
+text-decoration: none;
+}
+.modal-body i{
+	color:blue !important;
+}
+.modal-footer i{
+	color:white;
+}
+.logo img{
+  height: 230px;
+  width:300px;
+}
+.logo{
+	height: 240px;
+  width:100%;
+  border: 1px solid #BDBDBD;
+
+}
+.select{
+	height: 50px;
+	border-bottom:1px solid #BDBDBD ;
+}
+.stickey img{
+	width:40px;
+	height:36px;
+
+}
+.footer{
+    background-color:#61380B !important;
+    height:100px;
+ }
+  .footer .col-md-4{
+    border: 1px solid white !important;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+.footer .col-md-2{
+   color:white;
+   text-align: center;
+
+}
+.footer-product{
+    height: 300px !important;
+    color:#8A2908;
+}
+.product-img img{
+	width: 400px;
+	height:400px;
+}

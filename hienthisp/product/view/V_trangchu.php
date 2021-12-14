@@ -1,0 +1,292 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	 <link rel="shortcut icon"  href="../img/danhba1.ico">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<article class="container-fuld">
+    
+		
+		<section class="row">
+			
+
+			<section class="col-md-12">
+        
+				
+				<nav>
+			<ul>
+			
+				<li class="items"><a href="">Trang chủ</a></li>
+				<li class="items"><a href="">Sản phẩm</a></li>
+				<li class="items"><a href="">Đơn Hàng</a></li>
+				<li class="items"><a href="">Kho Hàng</a></li>
+				<li class="items"><a href="">Liên hệ</a></li>
+				<li class="items"><a href="?controller=logout">Đăng xuất</a></li>
+				
+			</ul>
+		</nav>
+			</section>
+		</section>
+		<section class="row">
+			
+				 <section class="col-md-3">
+    <div id="flip"><i class="fas fa-users"></i> Quản lý nhân viên</div>
+<div id="panel">
+  <div class="row">
+    
+
+    <div class="col-md-1"></div>
+
+    <div class="col-md-11">
+      <ul>
+        <li><a href=""><i class="fas fa-user-alt"></i> Quản lý ca làm </a></li>
+        <li><a href=""><i class="fas fa-user-alt"></i> Quản lý chốt ca</a></li>
+        <li><a href=""><i class="fas fa-user-alt"></i> Quản lý ngày nghỉ </a></li>
+        <li><a href=""><i class="fas fa-user-alt"></i> Quản lý lương</a></li>
+        
+
+
+      </ul>
+      
+
+
+    </div>
+  </div>
+  
+
+</div>
+<div id="flips"><i class="bi bi-box-seam"></i> Quản lý sản phẩm</div>
+<div id="panels">
+  <div class="row">
+    
+
+    <div class="col-md-1"></div>
+
+    <div class="col-md-11">
+      <ul>
+        <li><a href=""><i class="bi bi-box"></i>  Số lượng bán ngày</a></li>
+        <li><a href=""><i class="bi bi-box"></i> Số lượng bán tháng</a></li>
+        <li><a href=""><i class="bi bi-box"></i>  Số lượng hàng nhập</a></li>
+        <li><a href=""><i class="bi bi-box"></i> Số lượng hàng tồn kho</a></li>
+        
+
+
+      </ul>
+      
+
+
+    </div>
+  </div>
+</div>
+<div id="flipss"><i class="bi bi-receipt-cutoff"></i> Quản lý đơn hàng</div>
+<div id="panelss">
+  <div class="row">
+    
+
+    <div class="col-md-1"></div>
+
+    <div class="col-md-11">
+      <ul>
+        <li><a href=""><i class="bi bi-receipt"></i>  Tổng số đơn  ngày</a></li>
+        <li><a href=""><i class="bi bi-receipt"></i>  Tổng số đơn tháng</a></li>
+        <li><a href=""><i class="bi bi-receipt"></i> Đơn hàng giảm giá</a></li>
+        <li><a href=""><i class="bi bi-receipt"></i> Tổng tiền đơn hàng</a></li>
+        
+
+
+      </ul>
+
+      
+
+
+    </div>
+  </div>
+  
+
+</div>
+            
+    
+  </section> 
+  
+
+  <!-- quản lý nhân viên --->
+			
+			<section class="col-md-9 mt-5">
+        <section class="row">
+    <h1 class="text-center col-md-12">Chào mừng: <?php echo $user[0]['full_name'] ?></h1>
+  </section>
+				 <!-- Thêm nhân viên-->
+         <?php if ($user[0]['lv']==1) {?>
+				 <section>
+          <form action="?controller=addnhanvien" method="post" enctype="multipart/form-data">
+
+         <button class="btn btn-success" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-user-plus"></i> Thêm Sản phẩm </button>
+     
+       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <section class="col-md-12">
+
+<div class="modal-header">
+        <!----Thêm nhân viên--->
+          <h5 class="modal-title" id="staticBackdropLabel">Thêm sản phẩm</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        
+
+  <section class="form-group">
+    <label >Catolog_id</label>
+    <input type="text"  class="form-control"  required name="catolog_id">
+  
+    
+  </section>
+  <section class="form-group">
+    <label for="username">Name</label>
+    <input type="text" class="form-control"  required name="name">
+  </section>
+  <section class="form-group">
+    <label   >Price_sale</label>
+    <input type="text"   class="form-control"  required
+     name="price_sale">
+    
+  </section>
+  <section class="form-group">
+    <label for="lv">Price</label>
+    <input  class="form-control"  required id="lv" name="price">
+    
+  </section>
+   <section class="form-group">
+    <label for="lv">Amount</label>
+    <input  class="form-control"  required id="lv" name="amount">
+    
+  </section>
+   <section class="form-group">
+    <label for="lv">Img</label>
+     <input type="file" name="upload_file">
+    
+  </section>
+  <section class="form-group">
+    <label for="lv">Content</label>
+    <input  class="form-control"  required  name="content">
+    
+  </section>
+   <section class="form-group">
+   <button class="btn btn-success" type="submit" name="btn_add" value="Upload" >thêm sản phẩm</button>
+  </section>
+
+</section>
+</div>
+</div>
+</div>
+</form>
+</section>
+<br><br>
+<!-- end thêm nv-->
+ 
+<section>
+
+				<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Catolog_id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price_sale</th>
+      <th scope="col">Price</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Img</th>
+      <th scope="col">Content</th>
+
+    </tr>
+  </thead>
+  <!-- hiển thị nhân viên-->
+  <?php foreach ($product as $key => $value) {?>
+  <tbody>
+    <tr>
+      <th scope="row"><?php echo $value ['id'] ?></th>
+      <td><?php echo $value ['catolog_id'] ?></td>
+      <td><?php echo $value ['name'] ?></td>
+      <td><?php echo $value ['price_sale'] ?></td>
+      <td><?php echo $value ['price'] ?></td>
+      <td><?php echo $value ['amount'] ?></td>
+      <td><img style="width:50px; height:50px;" src="<?php echo $value['img_link'] ?>" ></td>
+      <td><?php echo $value ['content'] ?></td>
+      <!--- sửa xóa-->
+      <td >
+      	<a href="?controller=xuli_nhanvien&method=edit&id=<?php echo $value['id'] ?>"><button class="btn btn-success"><i class="fas fa-user-edit"></i></button></a>
+        <a href="?controller=xuli_nhanvien&method=del&id=<?php echo $value['id']?>"><button type="button" class="btn btn-danger"><i class="fas fa-user-times"></i></button></a>
+        <!-- bootstrap 
+      <button class="btn btn-danger" data-toggle="modal" data-target="#modalDelete"><i class="fas fa-user-times"></i></button>
+      </i></button></td>
+                                  
+<section class="row">
+    <section class="col-md-3" >
+      
+      <section class="modal fade" id="modalDelete">
+        <section class="modal-dialog"  >
+          <section class="modal-content" >
+            <section class="modal-header">
+              <h4 class="modal-title">Xóa</h4>
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+            </section>
+            <section class="modal-body">
+              Bạn có chắc muốn xóa không?
+            </section>
+            <section class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+              
+              <a href="?controller=xuli_nhanvien&method=del&id=<?php echo $value['id']?>"><button type="button" class="btn btn-success">OK</button></a>
+            </section>
+          </section>
+        </section>
+      </section>
+    </section>
+  </section>
+   end xóa --->
+
+
+      </td>
+    </tr>
+    
+  </tbody>
+  <?php  } ?>
+</table>
+</section>
+<?php }else{?>
+        <div class="row">
+         <div class="col-md-12"> <h3 class="text-center text-danger col-md-12">Bạn không có quyền quản lý nhân viên </h3></div>
+        </div>
+      <?php } ?>
+
+
+				
+
+
+			</section>
+		
+		</section>
+	</article>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

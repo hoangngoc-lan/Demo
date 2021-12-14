@@ -1,0 +1,179 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+nav{
+	background: black;
+	padding: 5px 40px;
+}
+nav ul{
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+nav ul li{
+	padding: 15px 0;
+	cursor: pointer;
+}
+nav ul li.items{
+	position: relative;
+	width: auto;
+	margin: 0 15px;
+	text-align: center;
+	order: 3;
+}
+nav ul li a{
+	color: #fff;
+	font-size: 16px;
+	text-decoration: none;
+}
+nav ul li.items:after{
+	position: absolute;
+	left: 0;
+	bottom: 5px;
+	content: '';
+	height: 2px;
+	width: 100%;
+	background: cyan;
+	opacity: 0;
+	transition: all 0.5s;
+}
+nav ul li.items:hover:after{
+	opacity: 1;
+	bottom: 15px;
+}
+nav ul li:hover a{
+	color: cyan;
+}
+#panel, #flip {
+height: 35px;
+ 
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+
+  height: 180px;
+
+  background-color:#black;
+}
+
+#panels, #flips {
+  height: 35px;
+
+ 
+  border: solid 1px #c3c3c3;
+}
+#flips {
+
+color: white;
+  text-align: left;
+  background-color:black;
+}
+
+#panels {
+  height: 180px;
+
+  background-color:#FAFAFA;
+}
+#flip{
+  color: white;
+  text-align: left;
+  background-color:black;
+}
+
+#panel  li {
+  width:100%;
+  display: inline-block;
+ 
+  line-height: 40px;
+  border-bottom: 1px solid #FFFFFF ;
+}
+#panel a{
+  text-decoration: none;
+
+}
+#panel ul li:hover{
+  background-color:black;
+}
+#flips{
+  color: white;
+  text-align: left;
+  background-color:black;
+}
+#panels ul li{
+
+  list-style: none;
+}
+#panels  li {
+  width:100%;
+  display: inline-block;
+ 
+  line-height: 40px;
+  border-bottom: 1px solid #FFFFFF ;
+}
+#panels a{
+  text-decoration: none;
+
+}
+#panels ul li:hover{
+  background-color:black;
+ 
+}
+#panels ul a:hover{
+   color:white;
+
+}
+#panel ul a:hover{
+   color:white;
+
+}
+#panelss, #flipss {
+  height: 35px;
+
+ 
+  border: solid 1px #c3c3c3;
+}
+#flipss {
+
+color: white;
+  text-align: left;
+  background-color:#0080FF;
+}
+
+#panelss {
+  height: 180px;
+ 
+  background-color:#FAFAFA;
+}
+#flipss{
+  color: white;
+  text-align: left;
+  background-color:black;
+}
+#panelss ul li{
+
+  list-style: none;
+}
+#panelss  li {
+  width:100%;
+  display: inline-block;
+ 
+  line-height: 40px;
+  border-bottom: 1px solid #FFFFFF ;
+}
+#panelss a{
+  text-decoration: none;
+
+}
+#panelss ul li:hover{
+  background-color:black;
+ 
+}
+#panelss ul a:hover{
+   color:white;
+
+}
